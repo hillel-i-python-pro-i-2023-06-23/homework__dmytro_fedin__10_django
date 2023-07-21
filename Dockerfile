@@ -30,4 +30,4 @@ VOLUME ${WORKDIR}/db
 
 EXPOSE 8000
 
-ENTRYPOINT ["flask", "app.py"]
+ENTRYPOINT ["python", "manage.py", "runserver"]
