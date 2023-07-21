@@ -20,12 +20,14 @@ RUN pip install --upgrade pip && \
     pip install --requirement requirements.txt
 
 # Set ownership and copy files/directories from the host machine to the container's filesystem during the build process.
-COPY --chown=${USER} ./app.py app.py
-COPY --chown=${USER} ./application application
-COPY --chown=${USER} ./source source
-COPY --chown=${USER} ./logs logs
-COPY --chown=${USER} ./output output
+COPY --chown=${USER} ./manage.py manage.py
+COPY --chown=${USER} ./apps apps
+COPY --chown=${USER} ./core core
 
 USER ${USER}
+
+VOLUME ${WORKDIR}/db
+
+EXPOSE 8000
 
 ENTRYPOINT ["flask", "app.py"]
