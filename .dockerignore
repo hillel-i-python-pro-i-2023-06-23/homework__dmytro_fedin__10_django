@@ -3,6 +3,6 @@
 
 # Exclude files/foldeers needed for docker
 !apps/
-!core/
+!apps/core/
 !manage.py
 !requirements.txt

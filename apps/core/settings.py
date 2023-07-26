@@ -63,7 +63,7 @@ MIDDLEWARE = [
 ]
 
 # Show all routs are in file
-ROOT_URLCONF = "core.urls"
+ROOT_URLCONF = "apps.core.urls"
 
 TEMPLATES = [
     {
