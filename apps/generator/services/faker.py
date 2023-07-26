@@ -1,5 +1,6 @@
 import string
 
+# Get faker
 from faker import Faker
 
 faker = Faker()
