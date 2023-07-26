@@ -7,5 +7,7 @@ app_name = "my"
 
 # Add routes instead of using decorators in views
 urlpatterns = [
-    path("<name>/<int:age>/", views.index, name="Index"),
+    path(
+        "<name>/<int:age>/", views.index, name="Index"
+    ),  # :TODO: change direct link ("/my-app") to named link ("my_app:my_route")
 ]
