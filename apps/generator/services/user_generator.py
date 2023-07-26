@@ -28,6 +28,6 @@ def generate_user() -> User:
     )
 
 
-def generate_users(amount: int) -> Iterator[User]:
+def generate_users(amount=20) -> Iterator[User]:
     for _ in range(amount):
         yield generate_user()
