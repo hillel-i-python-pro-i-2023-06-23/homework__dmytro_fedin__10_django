@@ -1,5 +1,11 @@
-from django.http import HttpResponse
+# from django.http import HttpResponse
+
+from django.shortcuts import render
 
 
-def index(request, name: str, age: int):
-    return HttpResponse(f"Hello, {name}! Your age {age}")
+def generator(request):
+    return render(
+        request=request,
+        template_name="index.html",  # :TODO: extend basic template
+        context={"value": "Hello world"},
+    )
