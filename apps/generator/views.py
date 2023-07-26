@@ -1,14 +1,7 @@
 from django.shortcuts import render
 
+# Get model for data handling
 from apps.generator.services import generate_users
-
-
-# def generator(request):
-#     return render(
-#         request=request,
-#         template_name="index.html",  # :TODO: extend basic template
-#         context={"value": "Hello all"},
-#     )
 
 
 def generator(request):
@@ -17,6 +10,6 @@ def generator(request):
 
     return render(
         request=request,
-        template_name="base/generator.html",  # :TODO: extend basic template
+        template_name="base/generator.html",
         context={"users": user_list},
     )

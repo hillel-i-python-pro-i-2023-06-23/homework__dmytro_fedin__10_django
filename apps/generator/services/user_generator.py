@@ -24,7 +24,7 @@ def generate_user() -> User:
     return User(
         login=faker.unique.user_name(),
         email=faker.unique.email(),
-        password=faker.unique.password(),
+        password=faker.password(),
     )
 
 
