@@ -46,6 +46,7 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
+# Register local apps
 LOCAL_APPS = [
     "apps.my",
 ]
