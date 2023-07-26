@@ -4,8 +4,9 @@ from . import faker
 
 
 class User(NamedTuple):
-    name: str
+    login: str
     email: str
+    password: str
 
     def get_dict(self) -> dict:
         return self._asdict()
@@ -20,7 +21,11 @@ class User(NamedTuple):
 
 
 def generate_user() -> User:
-    return User(name=faker.first_name(), email=faker.email())
+    return User(
+        login=faker.unique.user_name(),
+        email=faker.unique.email(),
+        password=faker.unique.password(),
+    )
 
 
 def generate_users(amount: int) -> Iterator[User]:
