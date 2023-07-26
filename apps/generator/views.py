@@ -17,6 +17,6 @@ def generator(request):
 
     return render(
         request=request,
-        template_name="index.html",  # :TODO: extend basic template
+        template_name="base/generator.html",  # :TODO: extend basic template
         context={"users": user_list},
     )
