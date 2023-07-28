@@ -13,6 +13,6 @@ def generator(request):
 
     return render(
         request=request,
-        template_name="base/generator.html",
+        template_name="generator/simple_list.html",
         context={"users": user_list},
     )
