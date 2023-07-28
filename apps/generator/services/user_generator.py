@@ -1,6 +1,7 @@
 from typing import NamedTuple
 from collections.abc import Iterator
-from . import faker
+
+from . import get_credentials
 
 
 class User(NamedTuple):
@@ -21,10 +22,12 @@ class User(NamedTuple):
 
 
 def generate_user() -> User:
+    concurrent_credentials = get_credentials()
+
     return User(
-        login=faker.unique.user_name(),
-        email=faker.unique.email(),
-        password=faker.password(),
+        login=concurrent_credentials[0],
+        email=concurrent_credentials[1],
+        password=concurrent_credentials[2],
     )
 
 
