@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Generator</title>
+    <title>Generator project</title>
 </head>
 <body>
-{% block content %}
-{% endblock %}
+
+{% include "_helpers/_header.html" %}
+
+<div>
+    {% block content %}
+    {% endblock %}
+</div>
+
 </body>
 </html>
