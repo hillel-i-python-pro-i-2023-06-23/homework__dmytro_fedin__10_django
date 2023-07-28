@@ -18,14 +18,10 @@ def get_credentials():
     def get_password():
         return current_faker.unique.password()
 
-    def get_email():
-        current_login = get_login()
-        current_text = get_text()
-        current_password = get_password()
-        domain_name = current_faker.unique.domain_name()
+    current_login = get_login()
+    current_text = get_text()
+    current_password = get_password()
+    domain_name = current_faker.unique.domain_name()
+    current_email = f"{current_login}{current_text}@{domain_name}"
 
-        current_email = f"{current_login}{current_text}@{domain_name}"
-
-        return current_login, current_email, current_password
-
-    return get_email()
+    return current_login, current_email, current_password
