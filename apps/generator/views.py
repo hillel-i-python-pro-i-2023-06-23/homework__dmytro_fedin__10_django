@@ -6,7 +6,10 @@ from apps.generator.services import generate_users
 
 def generator(request):
     user_generator = generate_users()
-    user_list = list(user_generator)
+
+    # Avoid identical items in the sequence
+    unique_user_set = set(user_generator)
+    user_list = list(unique_user_set)
 
     return render(
         request=request,

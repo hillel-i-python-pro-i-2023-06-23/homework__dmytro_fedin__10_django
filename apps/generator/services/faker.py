@@ -5,9 +5,16 @@ from faker import Faker
 
 def get_credentials():
     current_faker = Faker()
+
+    # Set templates for items
     characters = string.ascii_letters + string.digits + "_"
-    login_template = current_faker.lexify(text="????????", letters=characters)
-    text_template = current_faker.lexify(text="???", letters=characters)
+    password_characters = string.ascii_letters + string.digits + "!@#$^()"
+
+    login_template = current_faker.lexify(text="?" * 8, letters=characters)
+    text_template = current_faker.lexify(text="?" * 3, letters=characters)
+    password_template = current_faker.lexify(
+        text="?" * 12, letters=password_characters
+    )
 
     def get_login():
         return login_template
@@ -16,7 +23,7 @@ def get_credentials():
         return text_template
 
     def get_password():
-        return current_faker.unique.password()
+        return password_template
 
     current_login = get_login()
     current_text = get_text()
