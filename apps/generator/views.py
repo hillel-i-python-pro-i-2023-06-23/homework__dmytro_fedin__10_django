@@ -14,5 +14,5 @@ def generator(request):
     return render(
         request=request,
         template_name="generator/simple_list.html",
-        context={"users": user_list},
+        context={"users": user_list, "view_name": "generator"},
     )

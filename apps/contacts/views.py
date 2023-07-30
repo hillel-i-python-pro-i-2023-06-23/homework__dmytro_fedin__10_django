@@ -12,5 +12,5 @@ def contacts(request):
     return render(
         request=request,
         template_name="contacts/contacts_list.html",
-        context={"contacts": contacts_list},
+        context={"contacts": contacts_list, "view_name": "contacts"},
     )
