@@ -4,11 +4,10 @@
 {% block content %}
 
     <ol>
-        {% for user in users %}
+        {% for contact in contacts %}
             <li>
-                <p>Login: {{ user.login }}</p>
-                <p>Email: {{ user.email }}</p>
-                <p>Password: {{ user.password }}</p>
+                <p>Name: {{ contact.name }}</p>
+                <p>Phone: {{ contact.phone_number }}</p>
             </li>
         {% endfor %}
     </ol>
