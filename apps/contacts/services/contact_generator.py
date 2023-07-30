@@ -12,7 +12,6 @@ def generate_contact() -> Contact:
     return Contact(
         name=concurrent_credentials[0],
         phone_number=concurrent_credentials[1],
-        # password=concurrent_credentials[2], :TODO: add fields
     )
 
 
