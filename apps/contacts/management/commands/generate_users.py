@@ -1,13 +1,14 @@
 from django.core.management.base import BaseCommand
 
 
-class GenerateUsers(BaseCommand):
+class Command(BaseCommand):
     help = "Generate users"
 
     # Get parser for command args
     def add_arguments(self, parser):
+        # Set argument with default value
         parser.add_argument(
-            "amount",
+            "--amount",
             type=int,
             help="Number of users to generate",
             default=20,
