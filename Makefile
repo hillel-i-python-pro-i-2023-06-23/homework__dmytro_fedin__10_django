@@ -8,7 +8,7 @@ d-homework-i-run:
 .PHONY: d-homework-i-purge
 # Make all actions needed for purge homework related data.
 d-homework-i-purge:
-	@make d-purge
+	@bash ./scripts/d-homework-i-purge.sh
 
 
 .PHONY: init-configs

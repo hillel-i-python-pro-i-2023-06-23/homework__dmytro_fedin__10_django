@@ -17,6 +17,6 @@ def generate_contact() -> Contact:
 
 def generate_contacts(
     amount: int,
-) -> Iterator[Contact]:  # :TODO: add default arg
+) -> Iterator[Contact]:
     for _ in range(amount):
         yield generate_contact()
