@@ -13,5 +13,17 @@ class Contact(models.Model):
         default=False,
     )
 
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        blank=False,
+        null=False,
+    )
+
+    modified_at = models.DateTimeField(
+        auto_now=True,
+        blank=False,
+        null=False,
+    )
+
     def __str__(self):
         return f"{self.name}"
