@@ -8,5 +8,10 @@ class Contact(models.Model):
     # been_created :TODO: add field
     # been_changed
 
+    is_auto_generated = models.BooleanField(
+        blank=False,
+        default=False,
+    )
+
     def __str__(self):
         return f"{self.name}"
