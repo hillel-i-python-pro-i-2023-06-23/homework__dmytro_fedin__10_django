@@ -4,6 +4,17 @@
 {% block content %}
     <h1>Contacts</h1>
 
+    <!-- Button to create instance. -->
+    <div>
+        <!-- Add navigational lik down the page. -->
+        <a href="{% url 'contacts:contacts_create' %}">
+            <button>
+                Create contact
+            </button>
+        </a>
+
+    </div>
+
     <ol>
         {% for contact in object_list %}
             <li>
