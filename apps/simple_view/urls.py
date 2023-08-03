@@ -1,9 +1,9 @@
 from django.urls import path
 
 # Import view from my app
-from apps.my import views
+from apps.simple_view import views
 
-app_name = "my"
+app_name = "simple_view"
 
 # Add routes instead of using decorators in views
 urlpatterns = [
