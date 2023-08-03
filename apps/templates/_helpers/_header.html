@@ -1,24 +1,19 @@
 <header>
 
-    <div>
-        <h1>
-            {% if view_name == "contacts" %}
-                List of contacts
-            {% else %}
-                List of users
-            {% endif %}
-        </h1>
-    </div>
+    <div>Logo</div>
+
+    <ul>
+        <li>
+            <a href="{% url 'contacts:contacts' %}">
+                Generate contacts
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'generator:value' %}">
+                Generate users
+            </a>
+        </li>
 
 
-    <!-- Minimalistic menu to reset list. -->
-    <li>
-        {% if view_name == "contacts" %}
-            <a href="{% url 'contacts:contacts' %}">Reset list of contacts</a>
-        {% else %}
-            <a href="{% url 'generator:value' %}">Reset list of users</a>
-        {% endif %}
-    </li>
-
-
+    </ul>
 </header>

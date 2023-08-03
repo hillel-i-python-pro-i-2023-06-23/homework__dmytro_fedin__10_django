@@ -2,22 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-        {% if view_name == "contacts" %}
-        <title>Contacts Project</title>
-    {% else %}
-        <title>Generator Project</title>
-    {% endif %}
+    <title>
+        Main page
+    </title>
+
 </head>
 
 <body>
 
-{% include "_helpers/_header.html" with some_condition=request.resolver_match.view_name %}
+    {% include "_helpers/_header.html" %}
 
-<div>
-    {% block content %}
-    {% endblock %}
-</div>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
 
 </body>
 </html>
