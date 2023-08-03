@@ -12,7 +12,7 @@ class ContactsListView(ListView):
 
 
 # Create contact view
-# (needs appropriate template contacts/contact_form.html)
+# needs appropriate template contacts/contact_form.html
 class ContactCreateView(CreateView):
     model = Contact
     fields = ["name", "phone_number"]
