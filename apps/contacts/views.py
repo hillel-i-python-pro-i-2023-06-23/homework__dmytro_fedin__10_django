@@ -5,7 +5,7 @@ from django.shortcuts import render
 from apps.contacts.services import generate_contacts
 
 
-# Get model for data handling
+# Get views for CRUD
 def contacts(request):
     contacts_list = generate_contacts(10)
 
