@@ -2,9 +2,10 @@
 
 <!-- Block with contacts list. -->
 {% block content %}
+    <h1>Contacts</h1>
 
     <ol>
-        {% for contact in contacts %}
+        {% for contact in object_list %}
             <li>
                 <p>Name: {{ contact.name }}</p>
                 <p>Phone: {{ contact.phone_number }}</p>
