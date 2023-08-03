@@ -3,8 +3,8 @@ from django.shortcuts import render
 
 
 # My Django view
-def index(request):
-    simple_message = "hello"
+def index(request, name="Bob", age=40):
+    simple_message = f"Hello, {name}! I am {age}."
     # return HttpResponse(f"Hello, {name}! My age {age}")
 
     return render(
