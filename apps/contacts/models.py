@@ -33,5 +33,6 @@ class Contact(models.Model):
     def __str__(self):
         return f"{self.name}"
 
+    # Get metadata from model (sort by newest record)
     class Meta:
-        ordering = ["modified_at", "name"]
+        ordering = ["-modified_at", "name"]

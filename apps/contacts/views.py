@@ -1,6 +1,6 @@
 # For Django
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, DeleteView
 
 from apps.contacts.models import Contact
 
@@ -16,5 +16,19 @@ class ContactsListView(ListView):
 class ContactCreateView(CreateView):
     model = Contact
     fields = ["name", "phone_number"]
+
     # Address to place created instance
     success_url = reverse_lazy("contacts:contacts_list")
+
+
+class ContactUpdateView(CreateView):
+    model = Contact
+    fields = ["name", "phone_number"]
+
+    # Address to place created instance
+    success_url = reverse_lazy("contacts:contacts_list")
+
+
+class ContactDeleteView(DeleteView):
+    model = Contact
+    success_url = reverse_lazy("animals:animals_list")

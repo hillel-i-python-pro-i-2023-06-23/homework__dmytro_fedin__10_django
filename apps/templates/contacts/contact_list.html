@@ -16,10 +16,30 @@
     </div>
 
     <ol>
+        <!-- Record block. -->
         {% for contact in object_list %}
             <li>
-                <p>Name: {{ contact.name }}</p>
-                <p>Phone: {{ contact.phone_number }}</p>
+            <div style="display: flex; flex-flow: row;">
+                    <!-- Info block. -->
+                    <div style="margin: .2em;">
+                        <p>Name: {{ contact.name }}</p>
+                        <p>Phone: {{ contact.phone_number }}</p>
+                        <p>Modified: {{ contact.modified_at }}</p>
+                    </div>
+                    <!-- Manage block. -->
+                    <div style="margin: .2em;">
+                        <a href="{% url 'contacts:contacts_update' contact.pk %}">
+                            <button>
+                                Update
+                            </button>
+                        </a>
+                        <a href="{% url 'contacts:contacts_delete' contact.pk %}">
+                            <button>
+                                Delete
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </li>
         {% endfor %}
     </ol>
