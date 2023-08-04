@@ -4,23 +4,26 @@
         <img src="https://drive.google.com/uc?id=1Febe3BvwOfKxLE5wHU2_RMDiWCY8PMXJ" alt="My logo" height="200"/>
     </div>
 
-    <ul>
-        <li>
-            <!-- app_name:name in contacts/urls -->
-            <a href="{% url 'contacts:contacts_list' %}">
-                Generate contacts
-            </a>
-        </li>
-        <li>
-            <a href="{% url 'generator:value' %}">
-                Generate users
-            </a>
-        </li>
-        <li>
-            <a href="{% url 'simple_view:simple_view' %}">
-                Simple output
-            </a>
-        </li>
+    <div>
+        <h2>Applications</h2>
+        <ul>
+            <li>
+                <!-- app_name:name in contacts/urls -->
+                <a href="{% url 'contacts:contacts_list' %}">
+                    Contacts
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'generator:value' %}">
+                    Generate users
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'simple_view:simple_view' %}">
+                    Simple output
+                </a>
+            </li>
+        </ul>
+    </div>
 
-    </ul>
 </header>
