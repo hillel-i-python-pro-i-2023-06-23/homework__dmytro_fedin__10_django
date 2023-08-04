@@ -1,6 +1,6 @@
 # For Django
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, DeleteView
+from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 
 from apps.contacts.models import Contact
 
@@ -21,14 +21,22 @@ class ContactCreateView(CreateView):
     success_url = reverse_lazy("contacts:contacts_list")
 
 
-class ContactUpdateView(CreateView):
+class ContactUpdateView(UpdateView):
     model = Contact
     fields = ["name", "phone_number"]
 
     # Address to place created instance
     success_url = reverse_lazy("contacts:contacts_list")
 
+    # Send data to template
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["is_update"] = True
+        return context
+
 
 class ContactDeleteView(DeleteView):
     model = Contact
-    success_url = reverse_lazy("animals:animals_list")
+
+    # Address to place created instance
+    success_url = reverse_lazy("contacts:contacts_list")

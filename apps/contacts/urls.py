@@ -15,7 +15,7 @@ urlpatterns = [
     ),
     path(
         "delete/<int:pk>/",
-        views.ContactUpdateView.as_view(),
+        views.ContactDeleteView.as_view(),
         name="contacts_delete",
     ),
 ]

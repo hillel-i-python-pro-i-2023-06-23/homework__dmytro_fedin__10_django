@@ -2,7 +2,6 @@
 
 <!-- Block with form to create contact. -->
 {% block content %}
-    <h1>Create contact</h1>
         <h1>
         {% if is_update %}
             Update
@@ -20,6 +19,7 @@
 
         <!--Button to make actions-->
         <button type="submit">
+            <!--Var sent from view-->
             {% if is_update %}
                 Update
             {% else %}
