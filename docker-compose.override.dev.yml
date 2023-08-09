@@ -3,7 +3,7 @@ version: '3.9'
 
 services:
   app:
-    user: "${UID}"
+    #user: "${UID}"
     ports:
       - '8000:8000' # Host - app
     volumes:
