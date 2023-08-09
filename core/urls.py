@@ -5,5 +5,5 @@ from django.urls import path, include
 urlpatterns = [
     path("simple_view/", include("apps.simple_view.urls")),
     path("generator/", include("apps.generator.urls")),
-    path("contacts/", include("apps.contacts.urls")),
+    path("", include("apps.contacts.urls")),
 ]
