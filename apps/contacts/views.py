@@ -1,16 +1,10 @@
 # For Django
-from django.shortcuts import render
+from django.views.generic import ListView
 
-# For contacts handling
-from apps.contacts.services import generate_contacts
+from apps.contacts.models import Contact
 
 
 # Get model for data handling
-def contacts(request):
-    contacts_list = generate_contacts(10)
-
-    return render(
-        request=request,
-        template_name="contacts/contacts_list.html",
-        context={"contacts": contacts_list, "view_name": "contacts"},
-    )
+class ContactsListView(ListView):
+    model = Contact
+    # template_name = "contacts/contacts_list.html"

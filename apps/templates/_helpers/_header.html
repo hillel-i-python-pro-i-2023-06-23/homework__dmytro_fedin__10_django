@@ -2,10 +2,10 @@
 
     <div>
         <h1>
-            {% if view_name == "contacts" %}
-                List of contacts
+            {% if view_name == "generator" %}
+                List of generated users
             {% else %}
-                List of users
+                List of contacts
             {% endif %}
         </h1>
     </div>
@@ -13,10 +13,10 @@
 
     <!-- Minimalistic menu to reset list. -->
     <li>
-        {% if view_name == "contacts" %}
-            <a href="{% url 'contacts:contacts' %}">Reset list of contacts</a>
+        {% if view_name == "generator" %}
+            <a href="{% url 'generator:value' %}">Reset list of generated users</a>
         {% else %}
-            <a href="{% url 'generator:value' %}">Reset list of users</a>
+            <a href="{% url 'contacts:contacts_list' %}">Reset list of contacts</a>
         {% endif %}
     </li>
 

@@ -7,5 +7,5 @@ app_name = "contacts"
 
 # Add routes instead of using decorators in views
 urlpatterns = [
-    path("", views.contacts, name="contacts"),
+    path("list/", views.ContactsListView.as_view(), name="contacts_list"),
 ]
