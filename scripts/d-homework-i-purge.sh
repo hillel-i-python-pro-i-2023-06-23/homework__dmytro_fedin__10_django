@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
 export UID &&\
-make d-run
+make d-purge
