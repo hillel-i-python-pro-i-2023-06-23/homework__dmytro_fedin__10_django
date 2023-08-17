@@ -1,2 +1,3 @@
-from .faker import get_credentials
-from .user_generator import generate_users, User
+from .faker import fake_user
+from .user_generator import generate_users
+

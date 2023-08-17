@@ -7,5 +7,5 @@ app_name = "generator"
 
 # Add routes instead of using decorators in views
 urlpatterns = [
-    path("", views.generator, name="value"),
+    path("<int:user_count>/", views.generator, name="value"),
 ]
