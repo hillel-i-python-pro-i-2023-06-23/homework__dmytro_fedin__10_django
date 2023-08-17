@@ -7,7 +7,5 @@ app_name = "generator"
 
 # Add routes instead of using decorators in views
 urlpatterns = [
-    path(
-        "", views.generator, name="value"
-    ),  # :TODO: change direct link ("/my-app") to named link ("my_app:my_route")
+    path("<int:user_count>/", views.generator, name="value"),
 ]
