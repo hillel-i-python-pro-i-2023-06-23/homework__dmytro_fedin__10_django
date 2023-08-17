@@ -2,13 +2,22 @@
 
     <div>
         <h1>
-            List of users
+            {% if view_name == "generator" %}
+                List of generated users
+            {% else %}
+                List of contacts
+            {% endif %}
         </h1>
     </div>
 
-    <!-- Simple menu to reset list. -->
+    <!-- Minimalistic menu to reset list. -->
     <li>
-        <a href="{% url 'generator:value'  user_count %}">Reset list</a>
+        {% if view_name == "generator" %}
+            <a href="{% url 'generator:value' %}">Reset list of generated users</a>
+        {% else %}
+            <a href="{% url 'contacts:contacts_list' %}">Update list from database</a>
+        {% endif %}
+
     </li>
 
 

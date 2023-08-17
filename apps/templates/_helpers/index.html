@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Generator project</title>
+        {% if view_name == "generator" %}
+        <title>Generator Project</title>
+    {% else %}
+        <title>Contacts Project</title>
+    {% endif %}
 </head>
+
 <body>
 
-{% include "_helpers/_header.html" %}
+{% include "_helpers/_header.html" with some_condition=request.resolver_match.view_name %}
 
 <div>
     {% block content %}
