@@ -15,7 +15,10 @@ set -o xtrace
 # [bash_init]-[END]
 
 # Apply database migrations.
-make migrate
+python manage.py migrate
 
-# Run application.
+# Execute custom commands.
+python manage.py generate_contacts
+
+# Run application.contacts_contact
 python manage.py runserver 0.0.0.0:8000
