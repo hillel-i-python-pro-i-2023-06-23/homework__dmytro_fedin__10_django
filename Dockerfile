@@ -36,4 +36,5 @@ EXPOSE 8000
 
 ENTRYPOINT ["/entrypoint.sh"]
 
+# Implementc commands
 CMD ["/start.sh"]
