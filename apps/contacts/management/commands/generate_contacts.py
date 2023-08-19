@@ -19,6 +19,7 @@ class Command(BaseCommand):
             default=20,
         )
 
+    # Command to generate user list
     def handle(self, *args, **options) -> None:
         amount: int = options["amount"]
 

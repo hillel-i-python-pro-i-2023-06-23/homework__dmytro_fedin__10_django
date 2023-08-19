@@ -5,7 +5,7 @@ from apps.contacts import views
 
 app_name = "contacts"
 
-# Add routes instead of using decorators in views
+# Route to show previously generated list in template
 urlpatterns = [
     path("", views.ContactsListView.as_view(), name="contacts_list"),
 ]
